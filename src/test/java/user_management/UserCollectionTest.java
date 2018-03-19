@@ -13,29 +13,29 @@ import static org.junit.Assert.*;
 public class UserCollectionTest {
     private UserCollection users;
 
-//    @Before
-//    public void setUp() throws Exception {
-//        users = UserCollectionInitializer.generate();
-//    }
-//
-//    @Test
-//    public void findById() {
-//        User actual = users.findById(1);
-//
-//        User expected = new User(1, "Aprilette Polon", "apolon0@weebly.com", actual.getPassword());
-//
-//        assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void findByEmail() {
-//        User actual = users.findByEmail("apolon0@weebly.com");
-//
-//        User expected = new User(1, "Aprilette Polon", "apolon0@weebly.com", actual.getPassword());
-//
-//        assertEquals(expected, actual);
-//    }
-//
+    @Before
+    public void setUp() throws Exception {
+        users = UserCollectionInitializer.generate();
+    }
+
+    @Test
+    public void findById() {
+        User actual = users.findById(1);
+
+        User expected = new User(1, "Aprilette Polon", "apolon0@weebly.com", actual.getPassword());
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void findByEmail() {
+        User actual = users.findByEmail("apolon0@weebly.com");
+
+        User expected = new User(1, "Aprilette Polon", "apolon0@weebly.com", actual.getPassword());
+
+        assertEquals(expected, actual);
+    }
+
 //    @Test
 //    public void attemptLogin() throws UserAuthenticationFailedException {
 //        User actual = users.attemptLogin("apolon0@weebly.com", "apolon0@weebly.com");
