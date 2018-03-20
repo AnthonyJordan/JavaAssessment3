@@ -13,11 +13,12 @@ public class ElementCollectionInitializer {
         JsonReader reader;
         ElementCollection collection = new ElementCollection();
         reader = new JsonReader(new FileReader("/Users/anthonyjordan/Dev/JavaAssessment3/src/main/resources/periodic_table.json"));
-        Element[] elements = parser.fromJson(reader, Element[].class);
+        //Element[] elements = parser.fromJson(reader, Element[].class);
 
-        for (Element element: elements) {
-            collection.add(element);
-        }
+        collection = parser.fromJson(reader, ElementCollection.class);
+//        for (Element element: elements) {
+//            collection.add(element);
+//        }
         return collection;
     }
 }

@@ -14,11 +14,12 @@ public class UserCollectionInitializer {
         JsonReader reader;
         UserCollection collection = new UserCollection();
         reader = new JsonReader(new FileReader("/Users/anthonyjordan/Dev/JavaAssessment3/src/main/resources/users.json"));
-        User[] users = parser.fromJson(reader, User[].class);
-
-        for (User user: users) {
-            collection.add(user);
-        }
+//        User[] users = parser.fromJson(reader, User[].class);
+//
+//        for (User user: users) {
+//            collection.add(user);
+//        }
+        collection = parser.fromJson(reader, UserCollection.class);
         return collection;
     }
 }
